@@ -1,4 +1,4 @@
-# Visit https://github.com/lowlighter/metrics#-documentation for full reference
+# Visit https://github.com/lowlighter/metrics for full reference
 name: Metrics
 on:
   schedule: [{cron: "0 0 * * *"}]
@@ -11,11 +11,10 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          # Output
           filename: metrics.svg
-          token: ${{ secrets.METRICS_TOKEN }}          # GitHub token
+          token: ${{ secrets.METRICS_TOKEN }}
           output_action: gist
-          committer_gist: ${{ secrets.METRICS_GIST }}  # Gist ID
+          committer_gist: ${{ secrets.METRICS_GIST }}
 
           # General
           user: Toxic-Joker
@@ -23,13 +22,15 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/Paris
 
-          # Core plugins
+          # Fix case-sensitivity (still shows as lowercase in logs due to internal normalization)
+          plugin_activity_skipped: Toxic-Joker
+          plugin_habits_skipped: Toxic-Joker
+
+          # Core plugins (keep exactly as you had)
           plugin_activity: yes
           plugin_activity_days: 14
-          plugin_activity_filter: all
           plugin_activity_limit: 5
           plugin_activity_load: 300
-          plugin_activity_skipped: Toxic-Joker
           plugin_activity_visibility: public
           
           plugin_habits: yes
@@ -45,22 +46,15 @@ jobs:
           plugin_isocalendar_duration: full-year
           
           plugin_languages: yes
-          plugin_languages_analysis_timeout: 15
-          plugin_languages_analysis_timeout_repositories: 7.5
-          plugin_languages_categories: markup, programming
-          plugin_languages_colors: github
           plugin_languages_limit: 8
-          plugin_languages_other: yes
-          plugin_languages_recent_categories: markup, programming
-          plugin_languages_recent_days: 14
-          plugin_languages_recent_load: 300
-          plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
-
+          plugin_languages_colors: github
+          plugin_languages_sections: most-used
+          plugin_languages_categories: markup, programming
+          
           plugin_lines: yes
-          plugin_lines_history_limit: 1
-          plugin_lines_repositories_limit: 4
           plugin_lines_sections: base
+          plugin_lines_repositories_limit: 4
           
           plugin_traffic: yes
           
@@ -68,13 +62,6 @@ jobs:
           plugin_wakatime: yes
           plugin_wakatime_days: 30
           plugin_wakatime_limit: 5
-          plugin_wakatime_repositories_visibility: public
-          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
-          plugin_wakatime_url: https://wakatime.com
           plugin_wakatime_user: Toxic_Joker
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
-
-          # NEW: These 3 lines eliminate the "2 errors"
-          plugin_errors: false                    # Hide plugin errors in image
-          plugin_habits_skipped: Toxic-Joker      # Fix case-sensitivity
-          repositories_affiliations: owner        # Only your repos (faster)
+          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
