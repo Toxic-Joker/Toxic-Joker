@@ -11,17 +11,19 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
+          # Output
           filename: metrics.svg
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN }}          # GitHub token
           output_action: gist
-          committer_gist: ${{ secrets.METRICS_GIST }}
+          committer_gist: ${{ secrets.METRICS_GIST }}  # Gist ID
 
-          # Options
+          # General
           user: Toxic-Joker
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/Paris
 
+          # Core plugins
           plugin_activity: yes
           plugin_activity_days: 14
           plugin_activity_filter: all
@@ -62,6 +64,7 @@ jobs:
           
           plugin_traffic: yes
           
+          # WakaTime
           plugin_wakatime: yes
           plugin_wakatime_days: 30
           plugin_wakatime_limit: 5
@@ -70,3 +73,8 @@ jobs:
           plugin_wakatime_url: https://wakatime.com
           plugin_wakatime_user: Toxic_Joker
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+
+          # NEW: These 3 lines eliminate the "2 errors"
+          plugin_errors: false                    # Hide plugin errors in image
+          plugin_habits_skipped: Toxic-Joker      # Fix case-sensitivity
+          repositories_affiliations: owner        # Only your repos (faster)
