@@ -1,4 +1,5 @@
-name: Generate Metrics
+# Visit https://github.com/lowlighter/metrics#-documentation for full reference
+name: Metrics
 on:
   schedule: [{cron: "0 0 * * *"}]
   workflow_dispatch:
@@ -8,28 +9,19 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        
-      - name: Install Dependencies
-        run: |
-          pip install -r requirements.txt  # Install dependencies
-
-      - name: Generate Metrics
-        uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@latest
         with:
           filename: metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
           output_action: gist
           committer_gist: ${{ secrets.METRICS_GIST }}
-          
-          # Add error handling for missing data
+
+          # Options
           user: Toxic-Joker
           template: classic
           base: header, activity, community, repositories, metadata
-          config_timezone: Europe/Paris  
+          config_timezone: Europe/Paris
 
-          # Additional plugin settings
           plugin_activity: yes
           plugin_activity_days: 14
           plugin_activity_filter: all
@@ -38,7 +30,6 @@ jobs:
           plugin_activity_skipped: Toxic-Joker
           plugin_activity_visibility: public
           
-          # Add error handling for missing data in activity
           plugin_habits: yes
           plugin_habits_charts: yes
           plugin_habits_charts_type: classic
@@ -48,7 +39,6 @@ jobs:
           plugin_habits_languages_limit: 8
           plugin_habits_languages_threshold: 0%
           
-          # Optionally ignore null/empty values in certain sections
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           
@@ -64,15 +54,14 @@ jobs:
           plugin_languages_recent_load: 300
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
-          
-          # Optional: Fix for missing commit information
+
           plugin_lines: yes
           plugin_lines_history_limit: 1
           plugin_lines_repositories_limit: 4
           plugin_lines_sections: base
           
-          # Add traffic, wakatime, etc.
           plugin_traffic: yes
+          
           plugin_wakatime: yes
           plugin_wakatime_days: 30
           plugin_wakatime_limit: 5
