@@ -21,7 +21,6 @@ UNKNOWN Hat — breaking things to understand how to harden them
 - 🛡️ Hands-on with **OS hardening**, **network security**, and **cryptography**
 - 🐳 Docker-first workflows, FastAPI + LangGraph for agent orchestration
 - 🎮 Occasionally ship things purely for fun — like a real-time OBS broadcast overlay system
-- 🕒 `Europe/Paris`
 
 <br>
 
@@ -47,12 +46,21 @@ UNKNOWN Hat — breaking things to understand how to harden them
 
 <div align="center">
 
-<a href="https://github.com/Toxic-Joker/redteam-ai-framework">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Toxic-Joker&repo=redteam-ai-framework&theme=chartreuse-dark&hide_border=true&bg_color=000000" />
-</a>
-<a href="https://github.com/Toxic-Joker/inplay-studio">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Toxic-Joker&repo=inplay-studio&theme=chartreuse-dark&hide_border=true&bg_color=000000" />
-</a>
+<table>
+<tr>
+<td>
+
+**[🔴 redteam-ai-framework](https://github.com/Toxic-Joker/redteam-ai-framework)**
+
+Multi-agent Red Team orchestration framework. A local LLM is purely consultative — severity, risk, and report structure are always deterministic and tied to tool evidence. Docker-first, LangGraph orchestrator.
+
+![Python](https://img.shields.io/badge/Python-000000?style=flat-square&logo=python&logoColor=00FF66)
+![Docker](https://img.shields.io/badge/Docker--first-000000?style=flat-square&logo=docker&logoColor=00FF66)
+![LangGraph](https://img.shields.io/badge/LangGraph-000000?style=flat-square&logo=langchain&logoColor=00FF66)
+
+</td>
+</tr>
+</table>
 
 </div>
 
