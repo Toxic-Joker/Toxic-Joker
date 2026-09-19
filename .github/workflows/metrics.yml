@@ -42,11 +42,10 @@ jobs:
           plugin_lines_repositories_limit: 4
           
           plugin_traffic: yes
-          
-          # WakaTime
-          plugin_wakatime: yes
-          plugin_wakatime_days: 30
-          plugin_wakatime_limit: 5
-          plugin_wakatime_user: Toxic_Joker
-          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
-          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
+
+          # Random code snippet, replacing WakaTime. Visibility stays
+          # "public" so only public-repo code can ever be shown.
+          plugin_code: yes
+          plugin_code_lines: 12
+          plugin_code_visibility: public
+          plugin_code_languages: python, javascript, html, dockerfile
