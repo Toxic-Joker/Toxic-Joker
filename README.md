@@ -36,6 +36,7 @@ UNKNOWN Hat — breaking things to understand how to harden them
 ![Node.js](https://img.shields.io/badge/Node.js-000000?style=for-the-badge&logo=nodedotjs&logoColor=00FF66)
 ![Linux](https://img.shields.io/badge/Linux-000000?style=for-the-badge&logo=linux&logoColor=00FF66)
 ![Bash](https://img.shields.io/badge/Bash-000000?style=for-the-badge&logo=gnubash&logoColor=00FF66)
+![PowerShell](https://img.shields.io/badge/PowerShell-000000?style=for-the-badge&logo=powershell&logoColor=00FF66)
 ![Git](https://img.shields.io/badge/Git-000000?style=for-the-badge&logo=git&logoColor=00FF66)
 
 </div>
@@ -59,8 +60,38 @@ Multi-agent Red Team orchestration framework. A local LLM is purely consultative
 ![LangGraph](https://img.shields.io/badge/LangGraph-000000?style=flat-square&logo=langchain&logoColor=00FF66)
 
 </td>
+<td>
+
+**[🛡️ security-checkup](https://github.com/Toxic-Joker/security-checkup)**
+
+Claude Code skill that runs a read-only security checkup of a Windows PC, local projects, and a GitHub account against the threats currently in the news. Ends in a priority-ordered fix list and a CRITICAL/HIGH/MEDIUM/LOW score — it never changes a setting itself.
+
+![PowerShell](https://img.shields.io/badge/PowerShell-000000?style=flat-square&logo=powershell&logoColor=00FF66)
+![Bash](https://img.shields.io/badge/Bash-000000?style=flat-square&logo=gnubash&logoColor=00FF66)
+![Claude Code](https://img.shields.io/badge/Claude_Code_skill-000000?style=flat-square&logo=claude&logoColor=00FF66)
+
+</td>
 </tr>
 </table>
+
+</div>
+
+<br>
+
+## `$ find ./coursework -name "*.md"`
+
+<div align="center">
+
+Lab work from a cybersecurity Master's program.
+
+| Lab | Topics |
+|:--|:--|
+| [🦠 Malware Analysis](https://github.com/Toxic-Joker/Analyse-de-Malwares) | Malware analysis labs — ongoing |
+| [🔧 OS Hardening](https://github.com/Toxic-Joker/Hardening-d-OS) | Hardening basics, syscalls, isolation, SELinux |
+| [🔐 Cryptography](https://github.com/Toxic-Joker/Cryptographie) | OpenSSL, PKI |
+| [🌐 Network Security](https://github.com/Toxic-Joker/Securite_Reseaux) | Cisco / GNS3 labs, VLANs, common network attacks |
+| 🔒 Container Security *(private)* | Advanced Docker, image diving, container standards |
+| 🔒 DevSecOps *(private)* | Security integrated into the delivery pipeline |
 
 </div>
 
