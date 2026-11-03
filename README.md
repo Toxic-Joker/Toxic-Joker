@@ -18,7 +18,7 @@ UNKNOWN Hat — breaking things to understand how to harden them
 ## `$ cat about.md`
 
 - 🔴 Building **multi-agent red team orchestration** — LLMs are consultative only, severity/risk/report structure stay deterministic and tied to tool evidence
-- 🛡️ Hands-on with **OS hardening**, **network security**, and **cryptography**
+- 🛡️ Hands-on with **OS hardening**, **network security**, **cryptography**, and **OSINT**
 - 🐳 Docker-first workflows, FastAPI + LangGraph for agent orchestration
 - 🎮 Occasionally ship things purely for fun — like a real-time OBS broadcast overlay system
 
@@ -61,6 +61,20 @@ Multi-agent Red Team orchestration framework. A local LLM is purely consultative
 
 </td>
 <td>
+
+**[🔎 email-osint](https://github.com/Toxic-Joker/email-osint)**
+
+Free, self-hosted reverse email lookup. Paste an email and watch a profile build live: ~220 site registrations, Google & Play Games data, infostealer infections, and breach exposure. A local Ollama model writes the summary and risk score — no paid API keys, no lookup results stored.
+
+![Python](https://img.shields.io/badge/Python-000000?style=flat-square&logo=python&logoColor=00FF66)
+![FastAPI](https://img.shields.io/badge/FastAPI-000000?style=flat-square&logo=fastapi&logoColor=00FF66)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=00FF66)
+![OSINT](https://img.shields.io/badge/OSINT-000000?style=flat-square&logo=searxng&logoColor=00FF66)
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
 
 **[🛡️ security-checkup](https://github.com/Toxic-Joker/security-checkup)**
 
