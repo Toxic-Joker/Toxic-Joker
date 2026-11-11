@@ -102,8 +102,8 @@ Lab work from a cybersecurity Master's program.
 |:--|:--|
 | [🦠 Malware Analysis](https://github.com/Toxic-Joker/Analyse-de-Malwares) | Malware analysis labs — ongoing |
 | [🔧 OS Hardening](https://github.com/Toxic-Joker/Hardening-d-OS) | Hardening basics, syscalls, isolation, SELinux |
-| [🔐 Cryptography](https://github.com/Toxic-Joker/Cryptographie) | OpenSSL, PKI |
 | [🌐 Network Security](https://github.com/Toxic-Joker/Securite_Reseaux) | Cisco / GNS3 labs, VLANs, common network attacks |
+| 🔒 Cryptography *(private)* | OpenSSL, PKI |
 | 🔒 Container Security *(private)* | Advanced Docker, image diving, container standards |
 | 🔒 DevSecOps *(private)* | Security integrated into the delivery pipeline |
 
